@@ -11,9 +11,10 @@ struct MVVMView: View {
     @StateObject var userViewModel = UserViewModel()
     
     var body: some View {
-        List {
-            ForEach(userViewModel.userList) { user in
-                Text(user.name)
+        ViewThatFits(in: .vertical) {
+            UserList(userViewModel: userViewModel)
+            ScrollView {
+                UserList(userViewModel: userViewModel)
             }
         }
     }
