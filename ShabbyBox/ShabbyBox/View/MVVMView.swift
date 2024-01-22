@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct MVVMView: View {
+    @StateObject var userViewModel = UserViewModel()
+    
     var body: some View {
-        Text("MVVM View")
+        List {
+            ForEach(userViewModel.userList) { user in
+                Text(user.name)
+            }
+        }
     }
 }
 

@@ -57,9 +57,9 @@
 		F62E56E72B5A64EE0008D302 /* ShabbyBox */ = {
 			isa = PBXGroup;
 			children = (
-				F62E56F82B5BFD800008D302 /* ViewModel */,
-				F62E56F72B5BFD5B0008D302 /* View */,
 				F62E56F62B5BFD510008D302 /* Model */,
+				F62E56F72B5BFD5B0008D302 /* View */,
+				F62E56F82B5BFD800008D302 /* ViewModel */,
 				F62E56E82B5A64EE0008D302 /* ShabbyBoxApp.swift */,
 				F62E56EA2B5A64EE0008D302 /* ContentView.swift */,
 				F62E56EC2B5A64EF0008D302 /* Assets.xcassets */,
@@ -316,6 +316,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +346,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
