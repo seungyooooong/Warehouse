@@ -14,6 +14,8 @@
 		F62E56FA2B5BFDA10008D302 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62E56F92B5BFDA10008D302 /* UserModel.swift */; };
 		F62E56FC2B5BFDC10008D302 /* MVVMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62E56FB2B5BFDC10008D302 /* MVVMView.swift */; };
 		F62E56FE2B5BFEC90008D302 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62E56FD2B5BFEC90008D302 /* UserViewModel.swift */; };
+		F646053F2B5E6B8600588195 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646053E2B5E6B8600588195 /* UserList.swift */; };
+		F64605422B5E6CEF00588195 /* FrameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64605412B5E6CEF00588195 /* FrameExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		F62E56F92B5BFDA10008D302 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F62E56FB2B5BFDC10008D302 /* MVVMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMView.swift; sourceTree = "<group>"; };
 		F62E56FD2B5BFEC90008D302 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		F646053E2B5E6B8600588195 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
+		F64605412B5E6CEF00588195 /* FrameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 				F62E56E82B5A64EE0008D302 /* ShabbyBoxApp.swift */,
 				F62E56EA2B5A64EE0008D302 /* ContentView.swift */,
 				F62E56EC2B5A64EF0008D302 /* Assets.xcassets */,
+				F64605402B5E6CC000588195 /* Extensions */,
 				F62E56EE2B5A64EF0008D302 /* Preview Content */,
 			);
 			path = ShabbyBox;
@@ -87,6 +92,7 @@
 		F62E56F72B5BFD5B0008D302 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F646053D2B5E6B7900588195 /* Components */,
 				F62E56FB2B5BFDC10008D302 /* MVVMView.swift */,
 			);
 			path = View;
@@ -98,6 +104,22 @@
 				F62E56FD2B5BFEC90008D302 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F646053D2B5E6B7900588195 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F646053E2B5E6B8600588195 /* UserList.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F64605402B5E6CC000588195 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F64605412B5E6CEF00588195 /* FrameExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +194,10 @@
 			files = (
 				F62E56EB2B5A64EE0008D302 /* ContentView.swift in Sources */,
 				F62E56FA2B5BFDA10008D302 /* UserModel.swift in Sources */,
+				F64605422B5E6CEF00588195 /* FrameExtension.swift in Sources */,
 				F62E56FC2B5BFDC10008D302 /* MVVMView.swift in Sources */,
 				F62E56FE2B5BFEC90008D302 /* UserViewModel.swift in Sources */,
+				F646053F2B5E6B8600588195 /* UserList.swift in Sources */,
 				F62E56E92B5A64EE0008D302 /* ShabbyBoxApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
