@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserModel: Identifiable {
-    let id: String = UUID().uuidString
+struct UserModel: Identifiable, Codable {
+    let id: Int
     let name: String
 }

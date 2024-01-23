@@ -21,5 +21,5 @@ struct MVVMView: View {
 }
 
 #Preview {
-    MVVMView()
+    MVVMView(userViewModel: UserViewModel())
 }

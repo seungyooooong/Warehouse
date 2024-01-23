@@ -8,15 +8,15 @@
 import Foundation
 
 class UserViewModel: ObservableObject {
-    @Published var userList: [UserModel] = []
+    @Published var userList: [UserModel] = Bundle.main.decode("User.json")
     
     init() {
-        initData()
+//        initData()
 //        loadData()
     }
     
-    func initData() {
-        let userModel = UserModel(name: "testUser1")
-        userList.append(userModel)
-    }
+//    func initData() {
+//        let userModel = UserModel(name: "testUser1")
+//        userList.append(userModel)
+//    }
 }
