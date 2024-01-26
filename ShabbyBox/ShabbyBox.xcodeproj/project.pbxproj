@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F62E56E92B5A64EE0008D302 /* ShabbyBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62E56E82B5A64EE0008D302 /* ShabbyBoxApp.swift */; };
-		F62E56EB2B5A64EE0008D302 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62E56EA2B5A64EE0008D302 /* ContentView.swift */; };
 		F62E56ED2B5A64EF0008D302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62E56EC2B5A64EF0008D302 /* Assets.xcassets */; };
 		F62E56F02B5A64EF0008D302 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62E56EF2B5A64EF0008D302 /* Preview Assets.xcassets */; };
 		F62E56FA2B5BFDA10008D302 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62E56F92B5BFDA10008D302 /* UserModel.swift */; };
@@ -18,12 +17,12 @@
 		F64605422B5E6CEF00588195 /* FrameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64605412B5E6CEF00588195 /* FrameExtension.swift */; };
 		F646054C2B5FF44F00588195 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = F646054B2B5FF44F00588195 /* User.json */; };
 		F646054E2B5FF63F00588195 /* JsonDecodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646054D2B5FF63F00588195 /* JsonDecodeExtension.swift */; };
+		F64605502B63908500588195 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646054F2B63908500588195 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F62E56E52B5A64EE0008D302 /* ShabbyBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShabbyBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62E56E82B5A64EE0008D302 /* ShabbyBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShabbyBoxApp.swift; sourceTree = "<group>"; };
-		F62E56EA2B5A64EE0008D302 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F62E56EC2B5A64EF0008D302 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F62E56EF2B5A64EF0008D302 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F62E56F92B5BFDA10008D302 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -33,6 +32,7 @@
 		F64605412B5E6CEF00588195 /* FrameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameExtension.swift; sourceTree = "<group>"; };
 		F646054B2B5FF44F00588195 /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
 		F646054D2B5FF63F00588195 /* JsonDecodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecodeExtension.swift; sourceTree = "<group>"; };
+		F646054F2B63908500588195 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,6 @@
 				F62E56F72B5BFD5B0008D302 /* View */,
 				F62E56F82B5BFD800008D302 /* ViewModel */,
 				F62E56E82B5A64EE0008D302 /* ShabbyBoxApp.swift */,
-				F62E56EA2B5A64EE0008D302 /* ContentView.swift */,
 				F62E56EC2B5A64EF0008D302 /* Assets.xcassets */,
 				F64605432B5FF30800588195 /* Data */,
 				F64605402B5E6CC000588195 /* Extensions */,
@@ -99,6 +98,7 @@
 			children = (
 				F646053D2B5E6B7900588195 /* Components */,
 				F62E56FB2B5BFDC10008D302 /* MVVMView.swift */,
+				F646054F2B63908500588195 /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F62E56EB2B5A64EE0008D302 /* ContentView.swift in Sources */,
+				F64605502B63908500588195 /* MainView.swift in Sources */,
 				F62E56FA2B5BFDA10008D302 /* UserModel.swift in Sources */,
 				F64605422B5E6CEF00588195 /* FrameExtension.swift in Sources */,
 				F62E56FC2B5BFDC10008D302 /* MVVMView.swift in Sources */,

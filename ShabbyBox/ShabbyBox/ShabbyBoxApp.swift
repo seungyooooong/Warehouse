@@ -11,7 +11,7 @@ import SwiftUI
 struct ShabbyBoxApp: App {
     var body: some Scene {
         WindowGroup {
-            MVVMView()
+            MainView()
         }
     }
 }
