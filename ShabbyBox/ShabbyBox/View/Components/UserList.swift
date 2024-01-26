@@ -16,6 +16,9 @@ struct UserList: View {
                 Text(user.name)
                     .font(.headline)
                     .foregroundStyle(Color("oppositeColor"))
+                if user.id < userViewModel.userList.count - 1 {
+                    Divider()
+                }
             }
         }
         .hCenter()
