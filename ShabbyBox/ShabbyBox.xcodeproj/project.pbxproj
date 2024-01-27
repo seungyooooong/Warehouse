@@ -18,6 +18,7 @@
 		F646054C2B5FF44F00588195 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = F646054B2B5FF44F00588195 /* User.json */; };
 		F646054E2B5FF63F00588195 /* JsonDecodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646054D2B5FF63F00588195 /* JsonDecodeExtension.swift */; };
 		F64605502B63908500588195 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646054F2B63908500588195 /* MainView.swift */; };
+		F67CAD242B65460C007FF1F2 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD232B65460C007FF1F2 /* AppInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		F646054B2B5FF44F00588195 /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
 		F646054D2B5FF63F00588195 /* JsonDecodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecodeExtension.swift; sourceTree = "<group>"; };
 		F646054F2B63908500588195 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F67CAD232B65460C007FF1F2 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				F646053D2B5E6B7900588195 /* Components */,
 				F62E56FB2B5BFDC10008D302 /* MVVMView.swift */,
 				F646054F2B63908500588195 /* MainView.swift */,
+				F67CAD232B65460C007FF1F2 /* AppInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				F64605502B63908500588195 /* MainView.swift in Sources */,
 				F62E56FA2B5BFDA10008D302 /* UserModel.swift in Sources */,
 				F64605422B5E6CEF00588195 /* FrameExtension.swift in Sources */,
+				F67CAD242B65460C007FF1F2 /* AppInfoView.swift in Sources */,
 				F62E56FC2B5BFDC10008D302 /* MVVMView.swift in Sources */,
 				F62E56FE2B5BFEC90008D302 /* UserViewModel.swift in Sources */,
 				F646053F2B5E6B8600588195 /* UserList.swift in Sources */,

@@ -24,10 +24,10 @@ struct MainView: View {
                     Text("SecondView")
                 }
                 .tag(1)
-            Text("ThirdView")
+            AppInfoView()
                 .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("SecondView")
+                    Image(systemName: "gear")
+                    Text("AppInfo")
                 }
                 .tag(2)
         }

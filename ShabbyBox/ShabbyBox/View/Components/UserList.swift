@@ -22,7 +22,7 @@ struct UserList: View {
             }
         }
         .hCenter()
-        .padding()
+        .padding(25)
         .background(
             RoundedRectangle(cornerRadius: 15.0)
                 .fill(Color("mainColor"))
