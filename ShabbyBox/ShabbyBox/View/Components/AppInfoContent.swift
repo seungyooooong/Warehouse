@@ -31,12 +31,12 @@ struct AppInfoContent: View {
                     Link(destination: URL(string: "https://\(linkDestination!)")!) {
                         Text(linkLabel!)
                             .fontWeight(.bold)
-                            .foregroundColor(Color("mainColor"))
+                            .foregroundColor(Color("oppositeMainColor"))
                             .hTrailing()
                     }
                     
                     Image(systemName: "arrow.up.right.square")
-                        .foregroundColor(Color("mainColor"))
+                        .foregroundColor(Color("oppositeMainColor"))
                 } else {
                     EmptyView()
                 }
