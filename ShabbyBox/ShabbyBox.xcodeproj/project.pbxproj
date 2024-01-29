@@ -19,6 +19,8 @@
 		F646054E2B5FF63F00588195 /* JsonDecodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646054D2B5FF63F00588195 /* JsonDecodeExtension.swift */; };
 		F64605502B63908500588195 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646054F2B63908500588195 /* MainView.swift */; };
 		F67CAD242B65460C007FF1F2 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD232B65460C007FF1F2 /* AppInfoView.swift */; };
+		F67CAD262B6784E8007FF1F2 /* AppInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD252B6784E8007FF1F2 /* AppInfoLabel.swift */; };
+		F67CAD282B67861B007FF1F2 /* AppInfoContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD272B67861B007FF1F2 /* AppInfoContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		F646054D2B5FF63F00588195 /* JsonDecodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecodeExtension.swift; sourceTree = "<group>"; };
 		F646054F2B63908500588195 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F67CAD232B65460C007FF1F2 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
+		F67CAD252B6784E8007FF1F2 /* AppInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoLabel.swift; sourceTree = "<group>"; };
+		F67CAD272B67861B007FF1F2 /* AppInfoContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				F646053E2B5E6B8600588195 /* UserList.swift */,
+				F67CAD252B6784E8007FF1F2 /* AppInfoLabel.swift */,
+				F67CAD272B67861B007FF1F2 /* AppInfoContent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -218,6 +224,8 @@
 				F62E56FE2B5BFEC90008D302 /* UserViewModel.swift in Sources */,
 				F646053F2B5E6B8600588195 /* UserList.swift in Sources */,
 				F62E56E92B5A64EE0008D302 /* ShabbyBoxApp.swift in Sources */,
+				F67CAD262B6784E8007FF1F2 /* AppInfoLabel.swift in Sources */,
+				F67CAD282B67861B007FF1F2 /* AppInfoContent.swift in Sources */,
 				F646054E2B5FF63F00588195 /* JsonDecodeExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
