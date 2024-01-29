@@ -21,6 +21,7 @@
 		F67CAD242B65460C007FF1F2 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD232B65460C007FF1F2 /* AppInfoView.swift */; };
 		F67CAD262B6784E8007FF1F2 /* AppInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD252B6784E8007FF1F2 /* AppInfoLabel.swift */; };
 		F67CAD282B67861B007FF1F2 /* AppInfoContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD272B67861B007FF1F2 /* AppInfoContent.swift */; };
+		F67CAD2A2B679799007FF1F2 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD292B679799007FF1F2 /* AppInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		F67CAD232B65460C007FF1F2 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
 		F67CAD252B6784E8007FF1F2 /* AppInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoLabel.swift; sourceTree = "<group>"; };
 		F67CAD272B67861B007FF1F2 /* AppInfoContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoContent.swift; sourceTree = "<group>"; };
+		F67CAD292B679799007FF1F2 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				F646053D2B5E6B7900588195 /* Components */,
-				F62E56FB2B5BFDC10008D302 /* MVVMView.swift */,
 				F646054F2B63908500588195 /* MainView.swift */,
+				F62E56FB2B5BFDC10008D302 /* MVVMView.swift */,
 				F67CAD232B65460C007FF1F2 /* AppInfoView.swift */,
 			);
 			path = View;
@@ -124,6 +126,7 @@
 				F646053E2B5E6B8600588195 /* UserList.swift */,
 				F67CAD252B6784E8007FF1F2 /* AppInfoLabel.swift */,
 				F67CAD272B67861B007FF1F2 /* AppInfoContent.swift */,
+				F67CAD292B679799007FF1F2 /* AppInfo.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				F64605422B5E6CEF00588195 /* FrameExtension.swift in Sources */,
 				F67CAD242B65460C007FF1F2 /* AppInfoView.swift in Sources */,
 				F62E56FC2B5BFDC10008D302 /* MVVMView.swift in Sources */,
+				F67CAD2A2B679799007FF1F2 /* AppInfo.swift in Sources */,
 				F62E56FE2B5BFEC90008D302 /* UserViewModel.swift in Sources */,
 				F646053F2B5E6B8600588195 /* UserList.swift in Sources */,
 				F62E56E92B5A64EE0008D302 /* ShabbyBoxApp.swift in Sources */,
