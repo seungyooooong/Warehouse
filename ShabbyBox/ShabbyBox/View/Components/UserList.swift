@@ -13,14 +13,19 @@ struct UserList: View {
     var body: some View {
         VStack {
             GroupBox {
-                ForEach(userViewModel.userList) { user in
-                    Text(user.name)
-                        .font(.headline)
-                        .foregroundStyle(Color("oppositeColor"))
-                    if user.id < userViewModel.userList.count - 1 {
+                VStack(spacing: 15) {
+                    ForEach(userViewModel.userList) { user in
                         Divider()
+                        Text(user.name)
+                            .font(.headline)
+                            .foregroundStyle(Color("oppositeColor"))
                     }
                 }
+            } label: {
+                Text("UserList")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color("oppositeColor"))
             }
             .backgroundStyle(Color("mainColor"))
             Spacer()
