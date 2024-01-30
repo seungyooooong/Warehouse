@@ -11,23 +11,22 @@ struct UserList: View {
     @ObservedObject var userViewModel: UserViewModel
     
     var body: some View {
-        VStack(spacing: 20) {
-            ForEach(userViewModel.userList) { user in
-                Text(user.name)
-                    .font(.headline)
-                    .foregroundStyle(Color("oppositeColor"))
-                if user.id < userViewModel.userList.count - 1 {
-                    Divider()
+        VStack {
+            GroupBox {
+                ForEach(userViewModel.userList) { user in
+                    Text(user.name)
+                        .font(.headline)
+                        .foregroundStyle(Color("oppositeColor"))
+                    if user.id < userViewModel.userList.count - 1 {
+                        Divider()
+                    }
                 }
             }
+            .backgroundStyle(Color("mainColor"))
+            Spacer()
         }
         .hCenter()
-        .padding(25)
-        .background(
-            RoundedRectangle(cornerRadius: 15.0)
-                .fill(Color("mainColor"))
-                .padding(.horizontal)
-        )
+        .padding(15)
     }
 }
 
