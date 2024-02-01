@@ -1,14 +1,17 @@
 [
     {
         "id": 0,
-        "name": "testUserName0"
+        "name": "testUserName0",
+        "isLike": true
     },
     {
         "id": 1,
-        "name": "testUserName1"
+        "name": "testUserName1",
+        "isLike": false
     },
     {
         "id": 2,
-        "name": "testUserName2"
+        "name": "testUserName2",
+        "isLike": false
     },
 ]
