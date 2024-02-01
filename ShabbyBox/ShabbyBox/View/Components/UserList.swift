@@ -16,9 +16,14 @@ struct UserList: View {
                 VStack(spacing: 15) {
                     ForEach(userViewModel.userList) { user in
                         Divider()
-                        Text(user.name)
-                            .font(.headline)
-                            .foregroundStyle(Color("oppositeColor"))
+                        HStack {
+                            Image(systemName: user.isLike ? "heart.fill" : "heart")
+                                .frame(width: 20, alignment: .leading)
+                            Text(user.name)
+                                .hCenter()
+                                .font(.headline)
+                                .foregroundStyle(Color("oppositeColor"))
+                        }
                     }
                 }
             } label: {
