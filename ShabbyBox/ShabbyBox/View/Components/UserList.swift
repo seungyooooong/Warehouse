@@ -27,10 +27,22 @@ struct UserList: View {
                     }
                 }
             } label: {
-                Text("UserList")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundStyle(Color("oppositeColor"))
+                HStack {
+                    Text("UserList")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color("oppositeColor"))
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        userViewModel.addUser()
+                    }, label: {
+                        Text("Add Button")
+                    })
+                    .buttonStyle(.borderedProminent)
+                    .accentColor(Color("jejuOrangeColor"))
+                }
             }
             .backgroundStyle(Color("mainColor"))
             Spacer()

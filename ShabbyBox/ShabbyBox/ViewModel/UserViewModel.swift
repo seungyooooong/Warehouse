@@ -19,4 +19,29 @@ class UserViewModel: ObservableObject {
 //        let userModel = UserModel(name: "testUser1")
 //        userList.append(userModel)
 //    }
+    
+    func addUser() {
+        
+        let jsonStr = """
+        {
+            "id" : 3,
+            "name" : "testUserName3",
+            "isLike" : false,
+        }
+        """
+
+        guard let jsonData = jsonStr.data(using: .utf8) else {
+            fatalError()
+        }
+
+        let decoder = JSONDecoder()
+
+        do {
+            let p = try decoder.decode(UserModel.self, from: jsonData)
+            print(p)
+            
+        } catch {
+            print(error)
+        }
+    }
 }
