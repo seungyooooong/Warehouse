@@ -21,14 +21,18 @@ class UserViewModel: ObservableObject {
 //    }
     
     func addUser() {
+        let userData = UserModel(id: userList.count, name: "GoSil\(userList.count)", isLike: false)
         
-        let jsonStr = """
-        {
-            "id" : 3,
-            "name" : "testUserName3",
-            "isLike" : false,
+        let encoder = JSONEncoder()
+        
+        var jsonStr = ""
+        do {
+            let jsonData = try encoder.encode(userData)
+            let jsonString = String(data: jsonData, encoding: .utf8)!
+            jsonStr = jsonString
+        } catch {
+            print("\(error) in encoding")
         }
-        """
 
         guard let jsonData = jsonStr.data(using: .utf8) else {
             fatalError()
@@ -37,11 +41,11 @@ class UserViewModel: ObservableObject {
         let decoder = JSONDecoder()
 
         do {
-            let p = try decoder.decode(UserModel.self, from: jsonData)
-            print(p)
+            let user = try decoder.decode(UserModel.self, from: jsonData)
+            userList.append(user)
             
         } catch {
-            print(error)
+            print("\(error) in decoding")
         }
     }
 }

@@ -38,10 +38,9 @@ struct UserList: View {
                     Button(action: {
                         userViewModel.addUser()
                     }, label: {
-                        Text("Add Button")
+                        Image(systemName: "plus")
                     })
-                    .buttonStyle(.borderedProminent)
-                    .accentColor(Color("jejuOrangeColor"))
+                    .accentColor(Color("oppositeColor"))
                 }
             }
             .backgroundStyle(Color("mainColor"))
