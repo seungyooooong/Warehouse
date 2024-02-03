@@ -24,26 +24,15 @@ class UserViewModel: ObservableObject {
         let userData = UserModel(id: userList.count, name: "GoSil\(userList.count)", isLike: false)
         
         let encoder = JSONEncoder()
+        let decoder = JSONDecoder()
         
-        var jsonStr = ""
         do {
             let jsonData = try encoder.encode(userData)
-            let jsonString = String(data: jsonData, encoding: .utf8)!
-            jsonStr = jsonString
-        } catch {
-            print("\(error) in encoding")
-        }
-
-        guard let jsonData = jsonStr.data(using: .utf8) else {
-            fatalError()
-        }
-
-        let decoder = JSONDecoder()
-
-        do {
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            guard let jsonStr = jsonString else { fatalError() }
+            guard let jsonData = jsonStr.data(using: .utf8) else { fatalError() }
             let user = try decoder.decode(UserModel.self, from: jsonData)
             userList.append(user)
-            
         } catch {
             print("\(error) in decoding")
         }
