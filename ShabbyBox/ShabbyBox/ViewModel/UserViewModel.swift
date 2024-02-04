@@ -37,4 +37,9 @@ class UserViewModel: ObservableObject {
             print("\(error) in decoding")
         }
     }
+    
+    func toggleIsLike(user: UserModel) {
+        // user.id를 통해 json파일에서 어떤 user인지 찾아내고,
+        // 해당 user의 isLike를 !user.isLike로 수정한다.
+    }
 }

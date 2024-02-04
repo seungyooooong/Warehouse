@@ -17,8 +17,12 @@ struct UserList: View {
                     ForEach(userViewModel.userList) { user in
                         Divider()
                         HStack {
-                            Image(systemName: user.isLike ? "heart.fill" : "heart")
-                                .frame(width: 20, alignment: .leading)
+                            Button{
+                                userViewModel.toggleIsLike(user: user)
+                            } label: {
+                                Image(systemName: user.isLike ? "heart.fill" : "heart")
+                                    .accentColor(Color("oppositeColor"))
+                            }
                             Text(user.name)
                                 .hCenter()
                                 .font(.headline)
@@ -35,11 +39,11 @@ struct UserList: View {
                     
                     Spacer()
                     
-                    Button(action: {
+                    Button{
                         userViewModel.addUser()
-                    }, label: {
+                    } label: {
                         Image(systemName: "plus")
-                    })
+                    }
                     .accentColor(Color("oppositeColor"))
                 }
             }
