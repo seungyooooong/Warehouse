@@ -23,6 +23,7 @@
 		F67CAD2A2B679799007FF1F2 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD292B679799007FF1F2 /* AppInfo.swift */; };
 		F67CAD2C2B734D9B007FF1F2 /* AddUserSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD2B2B734D9B007FF1F2 /* AddUserSheet.swift */; };
 		F67CAD2E2B735F4D007FF1F2 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD2D2B735F4D007FF1F2 /* UserListView.swift */; };
+		F67CAD302B736F1D007FF1F2 /* StaticText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD2F2B736F1D007FF1F2 /* StaticText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		F67CAD292B679799007FF1F2 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		F67CAD2B2B734D9B007FF1F2 /* AddUserSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserSheet.swift; sourceTree = "<group>"; };
 		F67CAD2D2B735F4D007FF1F2 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		F67CAD2F2B736F1D007FF1F2 /* StaticText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				F646054B2B5FF44F00588195 /* User.json */,
+				F67CAD2F2B736F1D007FF1F2 /* StaticText.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				F646053F2B5E6B8600588195 /* UserList.swift in Sources */,
 				F62E56E92B5A64EE0008D302 /* ShabbyBoxApp.swift in Sources */,
 				F67CAD262B6784E8007FF1F2 /* AppInfoLabel.swift in Sources */,
+				F67CAD302B736F1D007FF1F2 /* StaticText.swift in Sources */,
 				F67CAD282B67861B007FF1F2 /* AppInfoContent.swift in Sources */,
 				F646054E2B5FF63F00588195 /* JsonDecodeExtension.swift in Sources */,
 				F67CAD2C2B734D9B007FF1F2 /* AddUserSheet.swift in Sources */,

@@ -17,16 +17,16 @@ class UserViewModel: ObservableObject {
         
     }
     
-    func validateUserName(userName: String) -> Bool {
+    func validateUserName(userName: String) -> String {
         guard userName.count > 2 else {
-            return false
+            return StaticText.userNameisTooShort
         }
         for i in 0 ..< userList.count {
             if (userList[i].name == userName) {
-                return false
+                return StaticText.userNameisAlreadyExisted
             }
         }
-        return true
+        return ""
     }
     
     func addUser(userName: String) {

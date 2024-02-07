@@ -11,6 +11,8 @@ struct AddUserSheet: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var userViewModel: UserViewModel
     @State var userName: String = ""
+    @State var showAlert: Bool = false
+    @State var alertText: String = ""
     
     var body: some View {
         HStack {
@@ -24,11 +26,12 @@ struct AddUserSheet: View {
                 .cornerRadius(10)
                 .font(.headline)
             Button {
-                if userViewModel.validateUserName(userName: userName) {
+                alertText = userViewModel.validateUserName(userName: userName)
+                if alertText == "" {
                     userViewModel.addUser(userName: userName)
                     presentationMode.wrappedValue.dismiss()
                 } else {
-                    print("userName is wrong")
+                    showAlert = true
                 }
             } label: {
                 Text("Add")
@@ -37,6 +40,9 @@ struct AddUserSheet: View {
             }
             .buttonStyle(.borderedProminent)
             .accentColor(Color("oppositeColor"))
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text(alertText))
+            }
         }
         .padding()
     }
