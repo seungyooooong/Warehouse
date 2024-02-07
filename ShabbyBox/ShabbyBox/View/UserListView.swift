@@ -1,13 +1,13 @@
 //
-//  MVVMView.swift
+//  UserListView.swift
 //  ShabbyBox
 //
-//  Created by 최승용 on 1/20/24.
+//  Created by 최승용 on 2/7/24.
 //
 
 import SwiftUI
 
-struct MVVMView: View {
+struct UserListView: View {
     @StateObject var userViewModel = UserViewModel()
     
     var body: some View {
@@ -21,5 +21,5 @@ struct MVVMView: View {
 }
 
 #Preview {
-    MVVMView(userViewModel: UserViewModel())
+    UserListView(userViewModel: UserViewModel())
 }

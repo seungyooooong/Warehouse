@@ -12,7 +12,7 @@ struct MainView: View {
     
     var body: some View {
         TabView(selection: $tagIndex) {
-            MVVMView()
+            UserListView()
                 .tabItem {
                     Image(systemName: "person.3")
                     Text("UserList")
