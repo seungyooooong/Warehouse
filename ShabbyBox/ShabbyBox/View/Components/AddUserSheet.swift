@@ -28,7 +28,7 @@ struct AddUserSheet: View {
                     userViewModel.addUser(userName: userName)
                     presentationMode.wrappedValue.dismiss()
                 } else {
-                    print("userName is too short!!!")
+                    print("userName is wrong")
                 }
             } label: {
                 Text("Add")

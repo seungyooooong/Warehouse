@@ -18,7 +18,15 @@ class UserViewModel: ObservableObject {
     }
     
     func validateUserName(userName: String) -> Bool {
-        return userName.count > 2
+        guard userName.count > 2 else {
+            return false
+        }
+        for i in 0 ..< userList.count {
+            if (userList[i].name == userName) {
+                return false
+            }
+        }
+        return true
     }
     
     func addUser(userName: String) {
