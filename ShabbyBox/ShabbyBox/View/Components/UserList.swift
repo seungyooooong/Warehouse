@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
-
+ 
 struct UserList: View {
     @ObservedObject var userViewModel: UserViewModel
+    @State var showSheet: Bool = false
     
     var body: some View {
         VStack {
@@ -40,11 +41,16 @@ struct UserList: View {
                     Spacer()
                     
                     Button{
-                        userViewModel.addUser()
+                        showSheet = true
                     } label: {
                         Image(systemName: "plus")
                     }
                     .accentColor(Color("oppositeColor"))
+                    .sheet(isPresented: $showSheet) {
+                        AddUserSheet(userViewModel: userViewModel)
+                            .presentationDetents([.medium])
+                            .presentationDragIndicator(.visible)
+                    }
                 }
             }
             .backgroundStyle(Color("mainColor"))

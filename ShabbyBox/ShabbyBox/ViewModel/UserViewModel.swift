@@ -17,8 +17,12 @@ class UserViewModel: ObservableObject {
         
     }
     
-    func addUser() {
-        let user = UserModel(id: userList.count, name: "GoSil\(userList.count)", isLike: false)
+    func validateUserName(userName: String) -> Bool {
+        return userName.count > 2
+    }
+    
+    func addUser(userName: String) {
+        let user = UserModel(id: userList.count, name: userName, isLike: false)
         userList.append(user)
         
 //        let userData = UserModel(id: userList.count, name: "GoSil\(userList.count)", isLike: false)
