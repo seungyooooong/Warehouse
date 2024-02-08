@@ -18,8 +18,13 @@ class UserViewModel: ObservableObject {
     }
     
     func validateUserName(userName: String) -> String {
-        guard userName.count > 2 else {
+        if userName.count < 2 {
             return StaticText.userNameisTooShort
+        }
+        for i in 0 ..< userName.count {
+            if Array(userName)[i] == " " {
+                return StaticText.userNameHasSpacer
+            }
         }
         for i in 0 ..< userList.count {
             if (userList[i].name == userName) {

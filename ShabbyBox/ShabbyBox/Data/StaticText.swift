@@ -10,6 +10,7 @@ import Foundation
 
 class StaticText {
     // MARK: - validate user name
-    static let userNameisTooShort = "이름이 너무 짧습니다."
-    static let userNameisAlreadyExisted = "이미 존재하는 이름입니다."
+    static let userNameHasSpacer = "이름에 공백을 사용할 수 없습니다."
+    static let userNameisTooShort = "두 글자 이상의 이름을 사용하세요."
+    static let userNameisAlreadyExisted = "사용중인 이름입니다."
 }
