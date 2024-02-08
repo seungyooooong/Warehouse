@@ -12,26 +12,8 @@ struct UserList: View {
     @State var showSheet: Bool = false
     
     var body: some View {
-        VStack {
-            GroupBox {
-                VStack(spacing: 15) {
-                    ForEach(userViewModel.userList) { user in
-                        Divider()
-                        HStack {
-                            Button{
-                                userViewModel.toggleIsLike(user: user)
-                            } label: {
-                                Image(systemName: user.isLike ? "heart.fill" : "heart")
-                                    .accentColor(Color("oppositeColor"))
-                            }
-                            Text(user.name)
-                                .hCenter()
-                                .font(.headline)
-                                .foregroundStyle(Color("oppositeColor"))
-                        }
-                    }
-                }
-            } label: {
+        VStack(spacing: 0) {
+            Group {
                 HStack {
                     Text("UserList")
                         .font(.title)
@@ -52,11 +34,38 @@ struct UserList: View {
                             .presentationDragIndicator(.visible)
                     }
                 }
+                .padding(15)
+                .background(Color("mainColor"))
+                List {
+                    ForEach(userViewModel.userList) { user in
+//                        Divider()
+                        HStack {
+                            Button {
+                                userViewModel.toggleIsLike(user: user)
+                            } label: {
+                                Image(systemName: user.isLike ? "heart.fill" : "heart")
+                                    .accentColor(Color("oppositeColor"))
+                            }
+                            Text(user.name)
+                                .hCenter()
+                                .font(.headline)
+                                .foregroundStyle(Color("oppositeColor"))
+                        }
+                        .padding(.vertical, 10)
+                        .swipeActions(edge: .leading, allowsFullSwipe: false) {
+                            Button {
+                                print("test")
+                            } label: {
+                                Image(systemName: "person.3")
+                            }
+                        }
+                    }
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color("mainColor"))
+                }
+                .listStyle(.plain)
             }
-            .backgroundStyle(Color("mainColor"))
-            Spacer()
         }
-        .hCenter()
         .padding(15)
     }
 }
