@@ -36,9 +36,9 @@ struct UserList: View {
                 }
                 .padding(15)
                 .background(Color("mainColor"))
+                Divider()
                 List {
                     ForEach(userViewModel.userList) { user in
-//                        Divider()
                         HStack {
                             Button {
                                 userViewModel.toggleIsLike(user: user)
@@ -52,14 +52,25 @@ struct UserList: View {
                                 .foregroundStyle(Color("oppositeColor"))
                         }
                         .padding(.vertical, 10)
-                        .swipeActions(edge: .leading, allowsFullSwipe: false) {
+                        .swipeActions(edge: .leading, allowsFullSwipe: true) {
                             Button {
-                                print("test")
+                                userViewModel.toggleIsLike(user: user)
                             } label: {
-                                Image(systemName: "person.3")
+                                Image(systemName: user.isLike ? "heart.slash" : "heart")
                             }
                         }
+//                        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+//                            Button {
+//                                print("delete function")
+//                            } label: {
+//                                Image(systemName: "trash")
+//                                    .tint(.red)
+//                            }
+//                        }
                     }
+                    .onDelete(perform: { indexSet in
+                        userViewModel.userList.remove(atOffsets: indexSet)
+                    })
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color("mainColor"))
                 }
