@@ -35,7 +35,7 @@ class UserViewModel: ObservableObject {
     }
     
     func addUser(userName: String) {
-        let user = UserModel(id: userList.count, name: userName, isLike: false)
+        let user = UserModel(id: userList[userList.count - 1].id + 1, name: userName, isLike: false)
         userList.append(user)
         
 //        let userData = UserModel(id: userList.count, name: "GoSil\(userList.count)", isLike: false)
