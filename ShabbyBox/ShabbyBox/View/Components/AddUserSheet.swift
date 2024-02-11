@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct AddUserSheet: View {
+    enum TextFieldType: Hashable {
+        case username
+    }
+    
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var userViewModel: UserViewModel
     @State var userName: String = ""
     @State var showAlert: Bool = false
     @State var alertText: String = ""
+    @FocusState private var focusField: TextFieldType?
     
     var body: some View {
         HStack {
@@ -25,6 +30,8 @@ struct AddUserSheet: View {
                 .background(Color("mainColor"))
                 .cornerRadius(10)
                 .font(.headline)
+                .focused($focusField, equals: .username)
+                .submitLabel(.done)
             Button {
                 alertText = userViewModel.validateUserName(userName: userName)
                 if alertText == "" {
@@ -45,6 +52,23 @@ struct AddUserSheet: View {
             }
         }
         .padding()
+        .onAppear {
+            focusField = .username
+        }
+        .onSubmit {
+            switch focusField {
+            case .username:
+                alertText = userViewModel.validateUserName(userName: userName)
+                if alertText == "" {
+                    userViewModel.addUser(userName: userName)
+                    presentationMode.wrappedValue.dismiss()
+                } else {
+                    showAlert = true
+                }
+            case .none:
+                print("error")
+            }
+        }
     }
 }
 
