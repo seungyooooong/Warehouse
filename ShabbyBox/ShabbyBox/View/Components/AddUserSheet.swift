@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct AddUserSheet: View {
-    enum TextFieldType: Hashable {
-        case username
-    }
-    
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var userViewModel: UserViewModel
     @State var userName: String = ""
