@@ -30,7 +30,7 @@ struct UserList: View {
                     .accentColor(Color("oppositeColor"))
                     .sheet(isPresented: $showSheet) {
                         AddUserSheet(userViewModel: userViewModel)
-                            .presentationDetents([.medium])
+                            .presentationDetents([.small])
                             .presentationDragIndicator(.visible)
                     }
                 }

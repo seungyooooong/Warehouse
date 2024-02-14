@@ -48,3 +48,9 @@ extension View {
         self.frame(maxWidth: .infinity, alignment: .trailing)
     }
 }
+
+// MARK: - Custom Sheet Size
+
+extension PresentationDetent {
+    static let small = Self.height(100)
+}
