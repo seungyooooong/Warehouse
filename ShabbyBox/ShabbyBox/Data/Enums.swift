@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - AddUserSheet
 enum TextFieldType: Hashable {
     case username
 }
