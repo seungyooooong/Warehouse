@@ -12,11 +12,11 @@ struct UserList: View {
     @State var showSheet: Bool = false
     
     var body: some View {
-        VStack(spacing: 0) {
-            Group {
+        List {
+            Section (header:
                 HStack {
                     Text("UserList")
-                        .font(.title)
+                        .font(.title2)
                         .fontWeight(.bold)
                         .foregroundStyle(Color("oppositeColor"))
                     
@@ -34,49 +34,46 @@ struct UserList: View {
                             .presentationDragIndicator(.visible)
                     }
                 }
-                .padding(15)
-                .background(Color("mainColor"))
-                Divider()
-                List {
-                    ForEach(userViewModel.userList) { user in
-                        HStack {
-                            Button {
-                                userViewModel.toggleIsLike(user: user)
-                            } label: {
-                                Image(systemName: user.isLike ? "heart.fill" : "heart")
-                                    .accentColor(Color("oppositeColor"))
-                            }
-                            Text(user.name)
-                                .hCenter()
-                                .font(.headline)
-                                .foregroundStyle(Color("oppositeColor"))
+            ) {
+                ForEach(userViewModel.userList) { user in
+                    HStack {
+                        Button {
+                            userViewModel.toggleIsLike(user: user)
+                        } label: {
+                            Image(systemName: user.isLike ? "heart.fill" : "heart")
+                                .accentColor(Color("oppositeColor"))
                         }
-                        .padding(.vertical, 10)
-                        .swipeActions(edge: .leading, allowsFullSwipe: true) {
-                            Button {
-                                userViewModel.toggleIsLike(user: user)
-                            } label: {
-                                Image(systemName: user.isLike ? "heart.slash" : "heart")
-                            }
-                        }
-//                        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-//                            Button {
-//                                print("delete function")
-//                            } label: {
-//                                Image(systemName: "trash")
-//                                    .tint(.red)
-//                            }
-//                        }
+                        Text(user.name)
+                            .hCenter()
+                            .font(.headline)
+                            .foregroundStyle(Color("oppositeColor"))
                     }
-                    .onDelete(perform: { indexSet in
-                        userViewModel.userList.remove(atOffsets: indexSet)
-                    })
-                    .listRowSeparator(.hidden)
-                    .listRowBackground(Color("mainColor"))
-                }
-                .listStyle(.plain)
-            }
-        }
+                    .padding(.vertical, 10)
+                    .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                        Button {
+                            userViewModel.toggleIsLike(user: user)
+                        } label: {
+                            Image(systemName: user.isLike ? "heart.slash" : "heart")
+                        }
+                    }
+                    //                        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                    //                            Button {
+                    //                                print("delete function")
+                    //                            } label: {
+                    //                                Image(systemName: "trash")
+                    //                                    .tint(.red)
+                    //                            }
+                    //                        }
+                }   // ForEach
+                .onDelete(perform: { indexSet in
+                    userViewModel.userList.remove(atOffsets: indexSet)
+                })
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color("mainColor"))
+            }   // Section
+        }   // List
+        .listStyle(.plain)
+        .cornerRadius(10.0)
         .padding(15)
     }
 }
