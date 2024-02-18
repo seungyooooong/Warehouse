@@ -11,12 +11,13 @@ struct UserListView: View {
     @StateObject var userViewModel = UserViewModel()
     
     var body: some View {
-        ViewThatFits(in: .vertical) {
-            UserList(userViewModel: userViewModel)
-            ScrollView {
-                UserList(userViewModel: userViewModel)
-            }
-        }
+        UserList(userViewModel: userViewModel)
+//        ViewThatFits(in: .vertical) {
+//            UserList(userViewModel: userViewModel)
+//            ScrollView {
+//                UserList(userViewModel: userViewModel)
+//            }
+//        }
     }
 }
 
