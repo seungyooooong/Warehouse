@@ -18,10 +18,10 @@ struct MainView: View {
                     Text("UserList")
                 }
                 .tag(0)
-            Text("SecondView")
+            ChartView()
                 .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("SecondView")
+                    Image(systemName: "chart.xyaxis.line")
+                    Text("Chart")
                 }
                 .tag(1)
             AppInfoView()

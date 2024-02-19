@@ -25,6 +25,7 @@
 		F67CAD2E2B735F4D007FF1F2 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD2D2B735F4D007FF1F2 /* UserListView.swift */; };
 		F67CAD302B736F1D007FF1F2 /* StaticText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD2F2B736F1D007FF1F2 /* StaticText.swift */; };
 		F67CAD322B7BB7D4007FF1F2 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD312B7BB7D4007FF1F2 /* Enums.swift */; };
+		F67CAD342B8333E9007FF1F2 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD332B8333E9007FF1F2 /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		F67CAD2D2B735F4D007FF1F2 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		F67CAD2F2B736F1D007FF1F2 /* StaticText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticText.swift; sourceTree = "<group>"; };
 		F67CAD312B7BB7D4007FF1F2 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		F67CAD332B8333E9007FF1F2 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				F646053D2B5E6B7900588195 /* Components */,
 				F646054F2B63908500588195 /* MainView.swift */,
 				F67CAD2D2B735F4D007FF1F2 /* UserListView.swift */,
+				F67CAD332B8333E9007FF1F2 /* ChartView.swift */,
 				F67CAD232B65460C007FF1F2 /* AppInfoView.swift */,
 			);
 			path = View;
@@ -235,6 +238,7 @@
 				F67CAD2A2B679799007FF1F2 /* AppInfo.swift in Sources */,
 				F62E56FE2B5BFEC90008D302 /* UserViewModel.swift in Sources */,
 				F67CAD2E2B735F4D007FF1F2 /* UserListView.swift in Sources */,
+				F67CAD342B8333E9007FF1F2 /* ChartView.swift in Sources */,
 				F67CAD322B7BB7D4007FF1F2 /* Enums.swift in Sources */,
 				F646053F2B5E6B8600588195 /* UserList.swift in Sources */,
 				F62E56E92B5A64EE0008D302 /* ShabbyBoxApp.swift in Sources */,
