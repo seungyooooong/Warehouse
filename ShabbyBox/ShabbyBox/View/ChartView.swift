@@ -8,30 +8,15 @@
 import SwiftUI
 import Charts
 
-struct WeightModel: Identifiable {
-    var id: String = UUID().uuidString
-    var day: String
-    var weight: Double
-}
-
-var weightData: [WeightModel] = [
-    WeightModel(day: "Sun", weight: 77),
-    WeightModel(day: "Mon", weight: 80),
-    WeightModel(day: "Tue", weight: 90),
-    WeightModel(day: "Wed", weight: 82),
-    WeightModel(day: "Thu", weight: 70),
-    WeightModel(day: "Fri", weight: 60),
-    WeightModel(day: "Sat", weight: 88)
-]
-
 struct ChartView: View {
+    @StateObject var userViewModel = UserViewModel()
+    
     var body: some View {
-        Chart(weightData) { item in
+        Chart(userViewModel.userList[0].likeForDate) { item in
             LineMark(
                 x: .value("Day", item.day),
-                y: .value("Weight", item.weight)
+                y: .value("Like", item.like)
             )
-//            .interpolationMethod(.catmullRom)
 //            .foregroundStyle(by: .value("Day", item.day))
             .symbol {
                 Circle()
@@ -44,7 +29,7 @@ struct ChartView: View {
 //            .symbol(by: .value("Day", item.day))
 //            .interpolationMethod(.catmullRom)
             .annotation(position: .overlay, alignment: .top) {
-                Text("\(Int(item.weight))")
+                Text("\(Int(item.like))")
             }
         }   // Chart
         .frame(height: 200)
@@ -52,6 +37,6 @@ struct ChartView: View {
 }
 
 #Preview {
-    ChartView()
+    ChartView(userViewModel: UserViewModel())
         .accentColor(Color("oppositeMainColor"))
 }
