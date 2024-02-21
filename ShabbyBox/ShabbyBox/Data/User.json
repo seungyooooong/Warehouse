@@ -53,33 +53,33 @@
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Mon",
+                "like": 80
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Tue",
+                "like": 92
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Wed",
+                "like": 50
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Thu",
+                "like": 88
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Fri",
+                "like": 79
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Sat",
+                "like": 61
             },
         ]
     },
@@ -95,33 +95,33 @@
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Mon",
+                "like": 80
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Tue",
+                "like": 92
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Wed",
+                "like": 50
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Thu",
+                "like": 88
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Fri",
+                "like": 79
             },
             {
                 "id": 1,
-                "day": "Sun",
-                "like": 77
+                "day": "Sat",
+                "like": 61
             },
         ]
     },
