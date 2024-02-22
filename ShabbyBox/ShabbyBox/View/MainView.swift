@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject var userViewModel = UserViewModel()
     @State var tagIndex: Int = 0
     
     var body: some View {
         TabView(selection: $tagIndex) {
-            UserListView()
+            UserListView(userViewModel: userViewModel)
                 .tabItem {
                     Image(systemName: "person.3")
                     Text("UserList")
                 }
                 .tag(0)
-            ChartView()
+            ChartView(userViewModel: userViewModel)
                 .tabItem {
                     Image(systemName: "chart.xyaxis.line")
                     Text("Chart")
@@ -36,5 +37,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
+    MainView(userViewModel: UserViewModel())
 }

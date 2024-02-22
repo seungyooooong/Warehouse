@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ChartView: View {
-    @StateObject var userViewModel = UserViewModel()
+    @ObservedObject var userViewModel: UserViewModel
     
     var body: some View {
-        ChartComp(userViewModel: userViewModel, likeForDate: userViewModel.userList[userViewModel.userList.count - 1].likeForDate)
+        ChartComp(userViewModel: userViewModel)
     }
 }
 

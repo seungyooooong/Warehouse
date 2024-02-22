@@ -10,10 +10,9 @@ import Charts
 
 struct ChartComp: View {
     @ObservedObject var userViewModel: UserViewModel
-    @State var likeForDate: [LikeForDateModel]
     
     var body: some View {
-        Chart(likeForDate) { item in
+        Chart(userViewModel.userList[userViewModel.userList.count - 1].likeForDate) { item in
             LineMark(
                 x: .value("Day", item.day),
                 y: .value("Like", item.like)
@@ -34,14 +33,10 @@ struct ChartComp: View {
             }
         }   // Chart
         .frame(height: 200)
-        .onAppear {
-            likeForDate = userViewModel.userList[userViewModel.userList.count - 1].likeForDate
-            print(likeForDate)
-        }
     }
 }
 
 #Preview {
-    ChartComp(userViewModel: UserViewModel(), likeForDate: [LikeForDateModel()])
+    ChartComp(userViewModel: UserViewModel())
         .accentColor(Color("oppositeMainColor"))
 }
