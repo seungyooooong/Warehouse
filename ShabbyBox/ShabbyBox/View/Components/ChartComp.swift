@@ -12,7 +12,7 @@ struct ChartComp: View {
     @ObservedObject var userViewModel: UserViewModel
     
     var body: some View {
-        Chart(userViewModel.userList[userViewModel.userList.count - 1].likeForDate) { item in
+        Chart(userViewModel.userList[userViewModel.selectedIndex].likeForDate) { item in
             LineMark(
                 x: .value("Day", item.day),
                 y: .value("Like", item.like)

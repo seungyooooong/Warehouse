@@ -47,6 +47,9 @@ struct UserList: View {
                             .hCenter()
                             .font(.headline)
                             .foregroundStyle(Color("oppositeColor"))
+                            .onTapGesture {
+                                userViewModel.showChart(user: user)
+                            }
                     }
                     .padding(.vertical, 10)
                     .swipeActions(edge: .leading, allowsFullSwipe: true) {

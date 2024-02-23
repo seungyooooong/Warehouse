@@ -9,10 +9,9 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject var userViewModel = UserViewModel()
-    @State var tagIndex: Int = 0
     
     var body: some View {
-        TabView(selection: $tagIndex) {
+        TabView(selection: $userViewModel.tagIndex) {
             UserListView(userViewModel: userViewModel)
                 .tabItem {
                     Image(systemName: "person.3")

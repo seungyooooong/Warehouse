@@ -9,6 +9,8 @@ import Foundation
 
 class UserViewModel: ObservableObject {
     @Published var userList: [UserModel] = Bundle.main.decode("User.json")
+    @Published var tagIndex: Int = 0
+    @Published var selectedIndex: Int = 0
     
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()
@@ -60,5 +62,10 @@ class UserViewModel: ObservableObject {
                 userList.insert(newUser, at: i)
             }
         }
+    }
+    
+    func showChart(user: UserModel) {
+        selectedIndex = user.id
+        tagIndex = 1
     }
 }

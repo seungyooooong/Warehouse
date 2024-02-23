@@ -11,7 +11,13 @@ struct ChartView: View {
     @ObservedObject var userViewModel: UserViewModel
     
     var body: some View {
-        ChartComp(userViewModel: userViewModel)
+        VStack {
+            Text("\(userViewModel.userList[userViewModel.selectedIndex].name)`s like for date")
+                .font(.subheadline)
+                .fontWeight(.bold)
+                .foregroundStyle(Color("oppositeColor"))
+            ChartComp(userViewModel: userViewModel)
+        }
     }
 }
 
