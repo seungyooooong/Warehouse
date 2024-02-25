@@ -38,7 +38,7 @@ class UserViewModel: ObservableObject {
     
     func addUser(userName: String) {
         // id를 유니크하게 보장하는 로직 추가 전에 임시로 마지막 user의 id보다 1높게 설정, 추후 수정
-        let user = UserModel(id: userList[userList.count - 1].id + 1, name: userName, isLike: false)
+        let user = UserModel(id: findUserId(), name: userName, isLike: false)
         userList.append(user)
         
 //        let userData = UserModel(id: userList.count, name: "GoSil\(userList.count)", isLike: false)
@@ -52,6 +52,15 @@ class UserViewModel: ObservableObject {
 //        } catch {
 //            print(error)
 //        }
+    }
+    
+    func findUserId() -> Int {
+        var userId = userList[userList.count - 1].id + 1
+        let sortedUserList = userList.sorted(by: { $0.id < $1.id })
+        for i in 0 ..< userList.count {
+//            print(sortedUserList[i].name)
+        }
+        return userId
     }
     
     func toggleIsLike(user: UserModel) {
