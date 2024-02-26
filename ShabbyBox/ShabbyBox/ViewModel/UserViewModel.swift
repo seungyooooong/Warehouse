@@ -55,12 +55,13 @@ class UserViewModel: ObservableObject {
     }
     
     func findUserId() -> Int {
-        var userId = userList[userList.count - 1].id + 1
         let sortedUserList = userList.sorted(by: { $0.id < $1.id })
         for i in 0 ..< userList.count {
-//            print(sortedUserList[i].name)
+            guard i == sortedUserList[i].id else {
+                return i
+            }
         }
-        return userId
+        return sortedUserList[userList.count - 1].id + 1
     }
     
     func toggleIsLike(user: UserModel) {
