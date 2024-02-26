@@ -64,6 +64,15 @@ class UserViewModel: ObservableObject {
         return sortedUserList[userList.count - 1].id + 1
     }
     
+    func findSelectedIndexByUserId(userId: Int) -> Int {
+        for i in 0 ..< userList.count {
+            if userList[i].id == userId {
+                return i
+            }
+        }
+        return 0
+    }
+    
     func toggleIsLike(user: UserModel) {
         for i in 0 ..< userList.count {
             if (userList[i].id == user.id) {
@@ -75,7 +84,7 @@ class UserViewModel: ObservableObject {
     }
     
     func showChart(user: UserModel) {
-        selectedIndex = user.id
+        selectedIndex = findSelectedIndexByUserId(userId: user.id)
         tagIndex = 1
     }
 }
