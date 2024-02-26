@@ -54,6 +54,13 @@ class UserViewModel: ObservableObject {
 //        }
     }
     
+    func removeUserByIndexSet(indexSet: IndexSet) {
+        if indexSet.last == userList.count - 1 {
+            selectedIndex = userList.count - 2
+        }
+        userList.remove(atOffsets: indexSet)
+    }
+    
     func findUserId() -> Int {
         let sortedUserList = userList.sorted(by: { $0.id < $1.id })
         for i in 0 ..< userList.count {

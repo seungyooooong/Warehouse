@@ -69,7 +69,7 @@ struct UserList: View {
                     //                        }
                 }   // ForEach
                 .onDelete(perform: { indexSet in
-                    userViewModel.userList.remove(atOffsets: indexSet)
+                    userViewModel.removeUserByIndexSet(indexSet: indexSet)
                 })
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color("mainColor"))
