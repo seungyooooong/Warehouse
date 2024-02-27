@@ -28,6 +28,7 @@
 		F67CAD342B8333E9007FF1F2 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD332B8333E9007FF1F2 /* ChartView.swift */; };
 		F67CAD362B85CD0D007FF1F2 /* ChartComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD352B85CD0D007FF1F2 /* ChartComp.swift */; };
 		F67CAD382B885D8C007FF1F2 /* ChartTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD372B885D8C007FF1F2 /* ChartTitle.swift */; };
+		F67CAD3A2B8DD0B7007FF1F2 /* NoUserNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAD392B8DD0B7007FF1F2 /* NoUserNoti.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		F67CAD332B8333E9007FF1F2 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		F67CAD352B85CD0D007FF1F2 /* ChartComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartComp.swift; sourceTree = "<group>"; };
 		F67CAD372B885D8C007FF1F2 /* ChartTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTitle.swift; sourceTree = "<group>"; };
+		F67CAD392B8DD0B7007FF1F2 /* NoUserNoti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoUserNoti.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,12 +139,13 @@
 			isa = PBXGroup;
 			children = (
 				F646053E2B5E6B8600588195 /* UserList.swift */,
+				F67CAD2B2B734D9B007FF1F2 /* AddUserSheet.swift */,
+				F67CAD372B885D8C007FF1F2 /* ChartTitle.swift */,
+				F67CAD352B85CD0D007FF1F2 /* ChartComp.swift */,
+				F67CAD392B8DD0B7007FF1F2 /* NoUserNoti.swift */,
+				F67CAD292B679799007FF1F2 /* AppInfo.swift */,
 				F67CAD252B6784E8007FF1F2 /* AppInfoLabel.swift */,
 				F67CAD272B67861B007FF1F2 /* AppInfoContent.swift */,
-				F67CAD292B679799007FF1F2 /* AppInfo.swift */,
-				F67CAD2B2B734D9B007FF1F2 /* AddUserSheet.swift */,
-				F67CAD352B85CD0D007FF1F2 /* ChartComp.swift */,
-				F67CAD372B885D8C007FF1F2 /* ChartTitle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				F62E56FA2B5BFDA10008D302 /* UserModel.swift in Sources */,
 				F64605422B5E6CEF00588195 /* FrameExtension.swift in Sources */,
 				F67CAD242B65460C007FF1F2 /* AppInfoView.swift in Sources */,
+				F67CAD3A2B8DD0B7007FF1F2 /* NoUserNoti.swift in Sources */,
 				F67CAD2A2B679799007FF1F2 /* AppInfo.swift in Sources */,
 				F62E56FE2B5BFEC90008D302 /* UserViewModel.swift in Sources */,
 				F67CAD2E2B735F4D007FF1F2 /* UserListView.swift in Sources */,

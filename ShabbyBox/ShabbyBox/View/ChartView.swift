@@ -16,12 +16,7 @@ struct ChartView: View {
                 ChartTitle(userViewModel: userViewModel)
                 ChartComp(userViewModel: userViewModel)
             } else {
-                Image(systemName: "x.circle")
-                    .padding(5)
-                Text("User missing")
-                    .font(.subheadline)
-                    .fontWeight(.bold)
-                    .foregroundStyle(Color("oppositeColor"))
+                NoUserNoti(userViewModel: userViewModel)
             }
         }
     }
