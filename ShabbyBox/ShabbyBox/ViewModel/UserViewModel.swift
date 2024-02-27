@@ -54,7 +54,7 @@ class UserViewModel: ObservableObject {
     }
     
     func removeUserByIndexSet(indexSet: IndexSet) {
-        if indexSet.last == selectedIndex && selectedIndex == userList.count - 1 {
+        if indexSet.last == selectedIndex && selectedIndex == userList.count - 1 && userList.count > 1 {
             selectedIndex = userList.count - 2
         }
         userList.remove(atOffsets: indexSet)
@@ -70,7 +70,6 @@ class UserViewModel: ObservableObject {
             }
             return sortedUserList[userList.count - 1].id + 1
         } else {
-            selectedIndex = 0
             return 0
         }
     }
