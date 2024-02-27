@@ -37,7 +37,6 @@ class UserViewModel: ObservableObject {
     }
     
     func addUser(userName: String) {
-        // id를 유니크하게 보장하는 로직 추가 전에 임시로 마지막 user의 id보다 1높게 설정, 추후 수정
         let user = UserModel(id: findUserId(), name: userName, isLike: false)
         userList.append(user)
         
@@ -55,20 +54,25 @@ class UserViewModel: ObservableObject {
     }
     
     func removeUserByIndexSet(indexSet: IndexSet) {
-        if indexSet.last == userList.count - 1 {
+        if indexSet.last == selectedIndex && selectedIndex == userList.count - 1 {
             selectedIndex = userList.count - 2
         }
         userList.remove(atOffsets: indexSet)
     }
     
     func findUserId() -> Int {
-        let sortedUserList = userList.sorted(by: { $0.id < $1.id })
-        for i in 0 ..< userList.count {
-            guard i == sortedUserList[i].id else {
-                return i
+        if userList.count > 0 {
+            let sortedUserList = userList.sorted(by: { $0.id < $1.id })
+            for i in 0 ..< userList.count {
+                guard i == sortedUserList[i].id else {
+                    return i
+                }
             }
+            return sortedUserList[userList.count - 1].id + 1
+        } else {
+            selectedIndex = 0
+            return 0
         }
-        return sortedUserList[userList.count - 1].id + 1
     }
     
     func findSelectedIndexByUserId(userId: Int) -> Int {
