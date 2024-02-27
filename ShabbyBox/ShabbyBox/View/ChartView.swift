@@ -12,8 +12,17 @@ struct ChartView: View {
     
     var body: some View {
         VStack {
-            ChartTitle(userViewModel: userViewModel)
-            ChartComp(userViewModel: userViewModel)
+            if userViewModel.userList.count > 0 {
+                ChartTitle(userViewModel: userViewModel)
+                ChartComp(userViewModel: userViewModel)
+            } else {
+                Image(systemName: "x.circle")
+                    .padding(5)
+                Text("User missing")
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color("oppositeColor"))
+            }
         }
     }
 }

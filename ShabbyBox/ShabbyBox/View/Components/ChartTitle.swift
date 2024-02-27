@@ -11,10 +11,12 @@ struct ChartTitle: View {
     @ObservedObject var userViewModel: UserViewModel
     
     var body: some View {
-        Text("\(userViewModel.userList[userViewModel.selectedIndex].name)`s like for date")
-            .font(.subheadline)
-            .fontWeight(.bold)
-            .foregroundStyle(Color("oppositeColor"))
+        if userViewModel.userList.count > 0 {
+            Text("\(userViewModel.userList[userViewModel.selectedIndex].name)`s like for date")
+                .font(.subheadline)
+                .fontWeight(.bold)
+                .foregroundStyle(Color("oppositeColor"))
+        }
     }
 }
 
