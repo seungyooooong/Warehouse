@@ -7,37 +7,37 @@
             {
                 "id": 1,
                 "day": "Sun",
-                "like": 77
+                "like": 0
             },
             {
                 "id": 1,
                 "day": "Mon",
-                "like": 80
+                "like": 0
             },
             {
                 "id": 1,
                 "day": "Tue",
-                "like": 92
+                "like": 0
             },
             {
                 "id": 1,
                 "day": "Wed",
-                "like": 50
+                "like": 0
             },
             {
                 "id": 1,
                 "day": "Thu",
-                "like": 88
+                "like": 0
             },
             {
                 "id": 1,
                 "day": "Fri",
-                "like": 79
+                "like": 0
             },
             {
                 "id": 1,
                 "day": "Sat",
-                "like": 61
+                "like": 1
             },
         ]
     },

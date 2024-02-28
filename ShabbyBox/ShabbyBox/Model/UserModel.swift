@@ -27,6 +27,13 @@ struct UserModel: Identifiable, Codable {
             LikeForDateModel(day: "Sat", like: 88)
         ]
     }
+    
+    init(id: Int, name: String, isLike: Bool, likeForDate: [LikeForDateModel]) {
+        self.id = id
+        self.name = name
+        self.isLike = isLike
+        self.likeForDate = likeForDate
+    }
 }
 
 struct LikeForDateModel: Identifiable, Codable {

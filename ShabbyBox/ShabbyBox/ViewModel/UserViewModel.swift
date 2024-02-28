@@ -86,7 +86,10 @@ class UserViewModel: ObservableObject {
     func toggleIsLike(user: UserModel) {
         for i in 0 ..< userList.count {
             if (userList[i].id == user.id) {
-                let newUser = UserModel(id: userList[i].id, name: userList[i].name, isLike: !user.isLike)
+                var newUserLikeForDate = user.likeForDate
+                let variation = user.isLike ? -1.0 : 1.0
+                newUserLikeForDate[6].like = userList[i].likeForDate[6].like + variation
+                let newUser = UserModel(id: userList[i].id, name: userList[i].name, isLike: !user.isLike, likeForDate: newUserLikeForDate)
                 userList.remove(at: i)
                 userList.insert(newUser, at: i)
             }
