@@ -13,27 +13,48 @@ struct MainView: View {
     var body: some View {
         TabView(selection: $userViewModel.tagIndex) {
             UserListView(userViewModel: userViewModel)
-                .tabItem {
-                    Image(systemName: "person.3")
-                    Text("UserList")
-                }
                 .tag(0)
             ChartView(userViewModel: userViewModel)
-                .tabItem {
-                    Image(systemName: "chart.xyaxis.line")
-                    Text("Chart")
-                }
                 .tag(1)
             AppInfoView()
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("AppInfo")
-                }
                 .tag(2)
-        }
+        }   // TabView
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                HStack {
+                    Button(action: { withAnimation { userViewModel.tagIndex = 0 } }) {
+                        VStack {
+                            Image(systemName: "person.3")
+                            Text("UserList")
+                        }
+                    }
+                    .foregroundColor(userViewModel.tagIndex == 0 ? .accentColor : .primary)
+                    .frame(maxWidth: .infinity)
+
+                    Button(action: { withAnimation { userViewModel.tagIndex = 1 } }) {
+                        VStack {
+                            Image(systemName: "chart.xyaxis.line")
+                            Text("Chart")
+                        }
+                    }
+                    .foregroundColor(userViewModel.tagIndex == 1 ? .accentColor : .primary)
+                    .frame(maxWidth: .infinity)
+
+                    Button(action: { withAnimation { userViewModel.tagIndex = 2 } }) {
+                        VStack {
+                            Image(systemName: "gear")
+                            Text("AppInfo")
+                        }
+                    }
+                    .foregroundColor(userViewModel.tagIndex == 2 ? .accentColor : .primary)
+                    .frame(maxWidth: .infinity)
+                }   // HStack
+                .font(.footnote)
+                .padding()
+            }   // ToolBarItem
+        }   // toolbar
         .accentColor(Color("oppositeMainColor"))
-//        .tabViewStyle(PageTabViewStyle())
-//        .indexViewStyle(.page(backgroundDisplayMode: .always))
     }
 }
 
