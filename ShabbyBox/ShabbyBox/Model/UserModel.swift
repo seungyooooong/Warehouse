@@ -18,13 +18,13 @@ struct UserModel: Identifiable, Codable {
         self.name = name
         self.isLike = isLike
         self.likeForDate = [
-            LikeForDateModel(day: "Sun", like: 77),
-            LikeForDateModel(day: "Mon", like: 80),
-            LikeForDateModel(day: "Tue", like: 90),
-            LikeForDateModel(day: "Wed", like: 82),
-            LikeForDateModel(day: "Thu", like: 70),
-            LikeForDateModel(day: "Fri", like: 60),
-            LikeForDateModel(day: "Sat", like: 88)
+            LikeForDateModel(day: "Sun", like: 7),
+            LikeForDateModel(day: "Mon", like: 0),
+            LikeForDateModel(day: "Tue", like: 9),
+            LikeForDateModel(day: "Wed", like: 2),
+            LikeForDateModel(day: "Thu", like: 7),
+            LikeForDateModel(day: "Fri", like: 6),
+            LikeForDateModel(day: "Sat", like: 2)
         ]
     }
     
@@ -44,7 +44,7 @@ struct LikeForDateModel: Identifiable, Codable {
     init() {
         self.id = 1
         self.day = "Sun"
-        self.like = 77
+        self.like = 0
     }
     
     init(day: String, like: Double) {
