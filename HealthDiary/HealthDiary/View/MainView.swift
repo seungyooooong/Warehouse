@@ -8,20 +8,28 @@
 import SwiftUI
 
 struct MainView: View {
+    @State var tagIndex = 1
+    
     var body: some View {
-        TabView {
+        TabView (selection: $tagIndex) {
             Text("Hello, World!")
                 .tabItem {
-                    Text("1")
+                    Image(systemName: "calendar")
+                    Text("Calendar")
                 }
+                .tag(0)
             Text("Hello, World2")
                 .tabItem {
-                    Text("2")
+                    Image(systemName: "pencil")
+                    Text("Record")
                 }
+                .tag(1)
             Text("Hello, World3")
                 .tabItem {
-                    Text("3")
+                    Image(systemName: "gear")
+                    Text("AppInfo")
                 }
+                .tag(2)
         }
     }
 }
