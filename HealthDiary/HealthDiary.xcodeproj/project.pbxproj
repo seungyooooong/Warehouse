@@ -11,6 +11,7 @@
 		F6CC15752B97521500689A02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CC15742B97521500689A02 /* ContentView.swift */; };
 		F6CC15772B97521600689A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6CC15762B97521600689A02 /* Assets.xcassets */; };
 		F6CC157A2B97521600689A02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6CC15792B97521600689A02 /* Preview Assets.xcassets */; };
+		F6CC15812B99DCE200689A02 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CC15802B99DCE200689A02 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F6CC15742B97521500689A02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F6CC15762B97521600689A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6CC15792B97521600689A02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F6CC15802B99DCE200689A02 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		F6CC15712B97521500689A02 /* HealthDiary */ = {
 			isa = PBXGroup;
 			children = (
+				F6CC15822B99DCE800689A02 /* View */,
 				F6CC15722B97521500689A02 /* HealthDiaryApp.swift */,
 				F6CC15742B97521500689A02 /* ContentView.swift */,
 				F6CC15762B97521600689A02 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				F6CC15792B97521600689A02 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F6CC15822B99DCE800689A02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6CC15802B99DCE200689A02 /* MainView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6CC15752B97521500689A02 /* ContentView.swift in Sources */,
+				F6CC15812B99DCE200689A02 /* MainView.swift in Sources */,
 				F6CC15732B97521500689A02 /* HealthDiaryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
