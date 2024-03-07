@@ -12,19 +12,19 @@ struct MainView: View {
     
     var body: some View {
         TabView (selection: $tagIndex) {
-            Text("Hello, World!")
+            CalendarView()
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("Calendar")
                 }
                 .tag(0)
-            Text("Hello, World2")
+            RecordView()
                 .tabItem {
                     Image(systemName: "pencil")
                     Text("Record")
                 }
                 .tag(1)
-            Text("Hello, World3")
+            AppInfoView()
                 .tabItem {
                     Image(systemName: "gear")
                     Text("AppInfo")
