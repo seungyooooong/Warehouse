@@ -48,7 +48,7 @@ struct UserList: View {
                             .font(.headline)
                             .foregroundStyle(Color("oppositeColor"))
                             .onTapGesture {
-                                withAnimation { userViewModel.showChart(user: user) }
+                                withAnimation { userViewModel.showChart(user: user)
                             }
                     }
                     .padding(.vertical, 10)
