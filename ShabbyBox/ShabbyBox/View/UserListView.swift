@@ -9,9 +9,10 @@ import SwiftUI
 
 struct UserListView: View {
     @ObservedObject var userViewModel: UserViewModel
+    @ObservedObject var tabViewModel: TabViewModel
     
     var body: some View {
-        UserList(userViewModel: userViewModel)
+        UserList(userViewModel: userViewModel, tabViewModel: tabViewModel)
 //        ViewThatFits(in: .vertical) {
 //            UserList(userViewModel: userViewModel)
 //            ScrollView {
@@ -22,5 +23,5 @@ struct UserListView: View {
 }
 
 #Preview {
-    UserListView(userViewModel: UserViewModel())
+    UserListView(userViewModel: UserViewModel(), tabViewModel: TabViewModel())
 }

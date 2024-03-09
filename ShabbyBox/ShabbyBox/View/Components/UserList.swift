@@ -9,6 +9,7 @@ import SwiftUI
  
 struct UserList: View {
     @ObservedObject var userViewModel: UserViewModel
+    @ObservedObject var tabViewModel: TabViewModel
     @State var showSheet: Bool = false
     
     var body: some View {
@@ -48,7 +49,7 @@ struct UserList: View {
                             .font(.headline)
                             .foregroundStyle(Color("oppositeColor"))
                             .onTapGesture {
-                                withAnimation { userViewModel.showChart(user: user)
+                                withAnimation { userViewModel.showChart(user: user, tabViewModel: tabViewModel) }
                             }
                     }
                     .padding(.vertical, 10)
@@ -82,5 +83,5 @@ struct UserList: View {
 }
 
 #Preview {
-    UserList(userViewModel: UserViewModel())
+    UserList(userViewModel: UserViewModel(), tabViewModel: TabViewModel())
 }
