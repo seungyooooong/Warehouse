@@ -6,19 +6,35 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct ContentView: View {
+    let store: StoreOf<Feature>
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        WithViewStore(store, observe: { $0 }) { viewStore in
+            VStack {
+                Text("\(viewStore.count)")
+                    .font(.title)
+                
+                HStack {
+                    Button("-") {
+                        // - Action
+                        viewStore.send(.minusButtonTap)
+                    }
+                    Button("+") {
+                        // + Action
+                        viewStore.send(.plusButtonTap)
+                    }
+                }
+                .buttonStyle(.borderedProminent)
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(store: Store(initialState: Feature.State(), reducer: {
+        Feature()
+    }))
 }
