@@ -10,7 +10,19 @@ import ComposableArchitecture
 
 struct LoginStore: Reducer {
     struct State: Equatable {
-        var isLogin: Bool
+        static func == (lhs: LoginStore.State, rhs: LoginStore.State) -> Bool {
+            return lhs.isLogin == rhs.isLogin
+        }
+        
+        var userDefaults: UserDefaults
+        var isLogin: Bool {
+            get {
+                return userDefaults.isLogin
+            }
+            set(newValue) {
+                userDefaults.isLogin = newValue
+            }
+        }
     }
     
     enum Action: Equatable {

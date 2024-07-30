@@ -9,6 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 
 struct LoginView: View {
+    @EnvironmentObject var userDefaults: UserDefaults
     let store: StoreOf<LoginStore>
     
     var body: some View {
@@ -29,5 +30,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(store: Store(initialState: LoginStore.State(isLogin: false), reducer: {LoginStore()}))
+    LoginView(store: Store(initialState: LoginStore.State(userDefaults: UserDefaults()), reducer: {LoginStore()}))
 }
