@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F64FBE082C50BB240024E920 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FBE072C50BB240024E920 /* LoginView.swift */; };
+		F64FBE0A2C50BB3B0024E920 /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FBE092C50BB3B0024E920 /* LoginStore.swift */; };
+		F64FBE412C5899080024E920 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FBE402C5899080024E920 /* ResponseModel.swift */; };
+		F64FBE432C5899C60024E920 /* JSONConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FBE422C5899C60024E920 /* JSONConverter.swift */; };
 		F679B9922C48D0620027608D /* TCAPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F679B9912C48D0620027608D /* TCAPracticeApp.swift */; };
 		F679B9942C48D0620027608D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F679B9932C48D0620027608D /* ContentView.swift */; };
 		F679B9962C48D0640027608D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F679B9952C48D0640027608D /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F64FBE072C50BB240024E920 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F64FBE092C50BB3B0024E920 /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
+		F64FBE402C5899080024E920 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		F64FBE422C5899C60024E920 /* JSONConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConverter.swift; sourceTree = "<group>"; };
 		F679B98E2C48D0620027608D /* TCAPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F679B9912C48D0620027608D /* TCAPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAPracticeApp.swift; sourceTree = "<group>"; };
 		F679B9932C48D0620027608D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +44,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F64FBE442C589BBE0024E920 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F64FBE452C589BC80024E920 /* ContentView */,
+				F64FBE462C589BE60024E920 /* LoginView */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F64FBE452C589BC80024E920 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				F679B9932C48D0620027608D /* ContentView.swift */,
+				F679B9A22C48D2D00027608D /* Feature.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		F64FBE462C589BE60024E920 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				F64FBE072C50BB240024E920 /* LoginView.swift */,
+				F64FBE092C50BB3B0024E920 /* LoginStore.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
 		F679B9852C48D0620027608D = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +91,11 @@
 			isa = PBXGroup;
 			children = (
 				F679B9912C48D0620027608D /* TCAPracticeApp.swift */,
-				F679B9932C48D0620027608D /* ContentView.swift */,
-				F679B9A22C48D2D00027608D /* Feature.swift */,
+				F64FBE442C589BBE0024E920 /* Presentation */,
 				F679B9952C48D0640027608D /* Assets.xcassets */,
 				F679B9972C48D0640027608D /* Preview Content */,
+				F64FBE402C5899080024E920 /* ResponseModel.swift */,
+				F64FBE422C5899C60024E920 /* JSONConverter.swift */,
 			);
 			path = TCAPractice;
 			sourceTree = "<group>";
@@ -149,7 +185,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F679B9A32C48D2D00027608D /* Feature.swift in Sources */,
+				F64FBE432C5899C60024E920 /* JSONConverter.swift in Sources */,
 				F679B9942C48D0620027608D /* ContentView.swift in Sources */,
+				F64FBE0A2C50BB3B0024E920 /* LoginStore.swift in Sources */,
+				F64FBE082C50BB240024E920 /* LoginView.swift in Sources */,
+				F64FBE412C5899080024E920 /* ResponseModel.swift in Sources */,
 				F679B9922C48D0620027608D /* TCAPracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
