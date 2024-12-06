@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct ShabbyBoxApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+//            MainView()
+            SwiftDataView()
+                .modelContainer(for: [TestData.self])
         }
     }
 }
